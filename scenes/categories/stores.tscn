@@ -1,0 +1,171 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/button_goto.gd" type="Script" id=1]
+[ext_resource path="res://theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/fonts/Lato-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+theme = ExtResource( 2 )
+color = Color( 0, 0.45098, 0.780392, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Back Button" type="Button" parent="."]
+margin_left = 15.0
+margin_top = 999.0
+margin_right = 325.0
+margin_bottom = 1062.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 2 )
+text = "Back to Menu"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+room_location = "res://scenes/main menu/hub.tscn"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 552.0
+margin_top = 312.0
+margin_right = 1394.0
+margin_bottom = 363.0
+rect_rotation = 0.0206417
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 1 )
+text = "What type of shop are you interested in?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 408.0
+margin_top = 400.0
+margin_right = 1536.0
+margin_bottom = 824.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Groccery" type="Button" parent="GridContainer"]
+margin_right = 370.0
+margin_bottom = 208.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "Groccery"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+room_location = "res://scenes/items_menu.tscn"
+filter_type = 2
+location_type = 1
+
+[node name="Gift shop" type="Button" parent="GridContainer"]
+margin_left = 378.0
+margin_right = 748.0
+margin_bottom = 208.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "Gift Shop"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+room_location = "res://scenes/items_menu.tscn"
+filter_type = 2
+location_type = 2
+
+[node name="Pet shop" type="Button" parent="GridContainer"]
+margin_left = 756.0
+margin_right = 1126.0
+margin_bottom = 208.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "Pet Shop"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+room_location = "res://scenes/items_menu.tscn"
+filter_type = 2
+location_type = 3
+
+[node name="Tools shop" type="Button" parent="GridContainer"]
+margin_top = 216.0
+margin_right = 370.0
+margin_bottom = 424.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "Tools Shop"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+room_location = "res://scenes/items_menu.tscn"
+filter_type = 2
+location_type = 4
+
+[node name="Electronics shop" type="Button" parent="GridContainer"]
+margin_left = 378.0
+margin_top = 216.0
+margin_right = 748.0
+margin_bottom = 424.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "Electronics Shop"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+room_location = "res://scenes/items_menu.tscn"
+filter_type = 2
+location_type = 5
+
+[node name="All" type="Button" parent="GridContainer"]
+margin_left = 756.0
+margin_top = 216.0
+margin_right = 1126.0
+margin_bottom = 424.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "All"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+room_location = "res://scenes/items_menu.tscn"
+filter_type = 2

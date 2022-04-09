@@ -1,0 +1,178 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/fonts/Lato-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://theme.tres" type="Theme" id=2]
+[ext_resource path="res://scripts/button_goto.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 42
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0.45098, 0.780392, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 437.723
+margin_top = 373.365
+margin_right = 1542.72
+margin_bottom = 670.365
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fun" type="Button" parent="GridContainer"]
+margin_right = 547.0
+margin_bottom = 143.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "Fun"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+room_location = "res://scenes/categories/fun.tscn"
+filter_type = 1
+location_type = 1
+
+[node name="Restaurants" type="Button" parent="GridContainer"]
+margin_left = 557.0
+margin_right = 1104.0
+margin_bottom = 143.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "Restaurants"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+room_location = "res://scenes/categories/food.tscn"
+filter_type = 1
+location_type = 2
+
+[node name="Stores" type="Button" parent="GridContainer"]
+margin_top = 153.0
+margin_right = 547.0
+margin_bottom = 296.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "Stores"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+room_location = "res://scenes/categories/stores.tscn"
+filter_type = 1
+location_type = 3
+
+[node name="Editors Favorite" type="Button" parent="GridContainer"]
+margin_left = 557.0
+margin_top = 153.0
+margin_right = 1104.0
+margin_bottom = 296.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "Editors Favorite"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+room_location = "res://scenes/items_menu.tscn"
+filter_type = 1
+location_type = 4
+
+[node name="Everything you can do" type="Button" parent="."]
+margin_left = 437.294
+margin_top = 682.794
+margin_right = 1539.29
+margin_bottom = 828.794
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Everything you can do in Tucson!"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+room_location = "res://scenes/items_menu.tscn"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 651.889
+margin_top = 283.23
+margin_right = 1309.89
+margin_bottom = 334.23
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "What would you like to know today?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Label" parent="."]
+margin_left = 807.69
+margin_top = 1024.64
+margin_right = 1157.69
+margin_bottom = 1066.64
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "application by florencio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Welcome Message" type="Label" parent="."]
+margin_left = 21.3446
+margin_top = 17.7872
+margin_right = 527.345
+margin_bottom = 91.7872
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Welcome to the Treval Kiosk!"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/fonts/Lato-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/Item Box.lua" type="Script" id=3]
+[ext_resource path="res://scripts/button_goto.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Control"]
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0.45098, 0.780392, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 748.0
+margin_top = 227.0
+margin_right = 1218.0
+margin_bottom = 286.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Location you may like.."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back Button" type="Button" parent="."]
+margin_left = 15.0
+margin_top = 999.0
+margin_right = 325.0
+margin_bottom = 1062.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+text = "Back to Menu"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+room_location = "res://scenes/main menu/hub.tscn"
+
+[node name="Item Box" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Item Box"]
+margin_left = 467.0
+margin_top = 322.0
+margin_right = 1498.0
+margin_bottom = 1080.0
+theme = ExtResource( 1 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Item Box/ScrollContainer"]
+margin_right = 1031.0
+margin_bottom = 758.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_lock_": true
+}
