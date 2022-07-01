@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/fonts/Lato-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://nodes/ui/location_box/Location_Box.gd" type="Script" id=2]
 [ext_resource path="res://theme.tres" type="Theme" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
 
 [sub_resource type="DynamicFont" id=2]
 size = 28
@@ -19,6 +21,7 @@ rect_min_size = Vector2( 600, 80 )
 mouse_filter = 2
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
+custom_styles/panel = SubResource( 4 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true,

@@ -1,0 +1,201 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/poweredby-travel-logo.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.419608, 0.572549, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id=2]
+resource_name = "New Anim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "New Anim"
+length = 3.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 315, 172 ), Vector2( 315, 800 ), Vector2( 315, 100 ), Vector2( 315, 172 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0.4, 0.4, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id=3]
+resource_name = "New Anim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "New Anim"
+length = 3.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 867, 394 ), Vector2( 867, 800 ), Vector2( 867, 100 ), Vector2( 867, 394 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.647059, 0.913725, 0.443137, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id=4]
+resource_name = "New Anim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "New Anim"
+length = 3.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1414, 670 ), Vector2( 1414, 800 ), Vector2( 1414, 100 ), Vector2( 1414, 670 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Panel" parent="."]
+margin_left = 315.0
+margin_top = 719.121
+margin_right = 515.0
+margin_bottom = 919.122
+rect_rotation = 39.2419
+rect_pivot_offset = Vector2( 100, 100 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="rotation" type="AnimationPlayer" parent="1"]
+autoplay = "New Anim"
+playback_speed = 0.03
+"anims/New Anim" = SubResource( 2 )
+
+[node name="movement" type="AnimationPlayer" parent="1"]
+autoplay = "New Anim"
+playback_speed = 0.08
+"anims/New Anim" = SubResource( 7 )
+
+[node name="2" type="Panel" parent="."]
+margin_left = 867.0
+margin_top = 778.73
+margin_right = 1067.0
+margin_bottom = 978.727
+rect_rotation = 80.2555
+rect_pivot_offset = Vector2( 100, 100 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="rotation" type="AnimationPlayer" parent="2"]
+autoplay = "New Anim"
+playback_speed = 0.03
+"anims/New Anim" = SubResource( 3 )
+
+[node name="movement" type="AnimationPlayer" parent="2"]
+autoplay = "New Anim"
+playback_speed = 0.08
+"anims/New Anim" = SubResource( 8 )
+
+[node name="3" type="Panel" parent="."]
+margin_left = 1414.0
+margin_top = 543.066
+margin_right = 1614.0
+margin_bottom = 743.066
+rect_rotation = 279.513
+rect_pivot_offset = Vector2( 100, 100 )
+custom_styles/panel = SubResource( 6 )
+
+[node name="rotation" type="AnimationPlayer" parent="3"]
+autoplay = "New Anim"
+playback_speed = 0.03
+"anims/New Anim" = SubResource( 4 )
+
+[node name="movement" type="AnimationPlayer" parent="3"]
+autoplay = "New Anim"
+playback_speed = 0.08
+"anims/New Anim" = SubResource( 9 )
+
+[node name="Transparent layer" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 1, 1, 1, 0.568627 )
+
+[node name="logo" type="Sprite" parent="."]
+position = Vector2( 956, 993 )
+scale = Vector2( 0.279274, 0.279274 )
+texture = ExtResource( 2 )

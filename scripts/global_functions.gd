@@ -16,7 +16,7 @@ func create_box(name, address):
 	# sets location_name and location_address for template node
 	template.location_name = name
 	template.location_address = address
-	
+
 	# add template node to the vboxcontainer node as a child
 	# think of a baby bird being reunited with their mother
 	get_node("/root/Node2D/Item Box/ScrollContainer/VBoxContainer").add_child(template)
